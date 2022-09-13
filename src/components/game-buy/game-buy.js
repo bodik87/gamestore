@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button } from '../button/button'
-import { deleteItemInCart, setItemInCart } from '../redux/cart/reducer'
+import { deleteItemFromCart, setItemInCart } from '../redux/cart/reducer'
 import './game-buy.css'
 
 export const GameBuy = ({ game }) => {
@@ -16,7 +16,7 @@ export const GameBuy = ({ game }) => {
     const handleClick = (e) => {
         e.stopPropagation();
         if (isItemInCart) {
-            dispatch(deleteItemInCart(game.id))
+            dispatch(deleteItemFromCart(game.id))
         } else {
             dispatch(setItemInCart(game))
         }
