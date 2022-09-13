@@ -24,13 +24,12 @@ export const CartMenu = ({ items, onClick }) => {
                     <div className="cart-menu__arrange">
                         <div className="cart-menu__total-price">
                             <span>Итого:</span>
-                            <span>{calcTotalPrice(items)} грн.</span>
+                            <span><b>{calcTotalPrice(items)}</b> грн</span>
                         </div>
                         <Button
                             type='primary'
                             size='m'
-                            onClick={onClick}>
-                            Оформить заказ
+                            onClick={onClick}>Оформить заказ
                         </Button>
                     </div>
                     : null
